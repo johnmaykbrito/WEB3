@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>new FormData()</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="index.js"></script>
+    </head>
+    <body>
+        <h1>Olá, Ajax!</h1>
+        <form action="ServletAjax" method="POST" name="meuform">
+            <label>Nome:</label> <input type="text" name="nome"/>
+            <label>Sobrenome:</label> <input type="text" name="sobrenome"/>
+            <input type="submit">
+        </form>
+        <h3>Descrição curta: </h3>
+        <p align="justify">
+            Este projeto tem um formulário com os campos nome e sobrenome que são enviados ao servidor, através de requisição Ajax descrita no index.js, utilizando o método POST. A resposta do servidor ao Ajax é Textual substitui o texto na tela na tag &lt;h1&gt;.
+        </p>
+        <p align="justify">
+            <strong>Problema:</strong>
+        </p>
+        <p align="justify">
+            O charset enconding.
+        </p>
+        <p align="justify" style="color: purple">
+            <strong>Solução:</strong>
+        </p>
+        <p align="justify" style="color: purple">
+            No Servlet somente o response estava setando o charset: <code>response.setCharacterEncoding("UTF-8");</code>
+            <br/>A solução foi fazer com que o request também setasse o encoding: <code>request.setCharacterEncoding("UTF-8");</code>
+        </p>
+        <p align="justify">
+            <strong>new FormData():</strong>
+        </p>
+        <p align="justify">
+            Ao usar esse objeto podemos enviar todas as informações de um formulário ao servidor sem precisar pegar um por um com códigos específicos.
+            Por exemplo, em vez de ter de fazer isso:
+        </p>
+        <p align="justify">
+            <code>var nome = document.getElementsByName("nome")[0].value;</code><br/>
+        </p>
+        <p align="justify">
+            Você pode simplesmente fazer isso:
+        </p>
+        <p align="justify">
+            <code>var data = new FormData(document.forms['meuform']);</code>
+        </p>
+        <p align="justify">
+            Outro detahe importante é que não será necessário usar o:
+        </p>
+        <p align="justify">
+            <code>xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");</code>
+        </p>
+    </body>
+</html>

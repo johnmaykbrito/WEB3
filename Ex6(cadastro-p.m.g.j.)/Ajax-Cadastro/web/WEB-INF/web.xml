@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+    <servlet>
+        <servlet-name>Exemplo6a</servlet-name>
+        <servlet-class>servlets.Exemplo6a</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Exemplo6a</servlet-name>
+        <url-pattern>/Exemplo6a</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Exemplo6b</servlet-name>
+        <servlet-class>servlets.Exemplo6b</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Exemplo6b</servlet-name>
+        <url-pattern>/Exemplo6b</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Exemplo6c</servlet-name>
+        <servlet-class>servlets.Exemplo6c</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Exemplo6c</servlet-name>
+        <url-pattern>/Exemplo6c</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Exemplo6d</servlet-name>
+        <servlet-class>servlets.Exemplo6d</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Exemplo6d</servlet-name>
+        <url-pattern>/Exemplo6d</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Exemplo6e</servlet-name>
+        <servlet-class>servlets.Exemplo6e</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Exemplo6e</servlet-name>
+        <url-pattern>/Exemplo6e</url-pattern>
+    </servlet-mapping>
+</web-app>
